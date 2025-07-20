@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Original+Surfer&display=swap');
+
+body {
+  background-color: #83d8ff;
+}
+/* gradient header area */
+.gradient-bg{
+    position: relative;
+    overflow:hidden;
+    width: 100%;
+    height: 50vh;
+    text-align: center;
+    background: linear-gradient(-45deg,#8ecae6,#219ebc,#023047);
+    background-size: 600% 600%;
+    animation: gradientShift 25s ease infinite alternate;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+    font-family: Arial, sans-serif;
+    z-index: 1;
+    h1{
+        font-family: "DynaPuff", system-ui;
+        font-weight: 700;
+        font-size: 100px;
+        padding:0;
+        margin: 0;
+    }
+    h2{
+        font-family: "Original Surfer", sans-serif;
+        font-weight: 400;
+        font-size: 50px;
+        padding:0;
+        margin: 0;
+    }
+}
+
+/* styles the basic bubble */
+.bubble {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    box-shadow: inset 0 0 8px rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(2px);
+    z-index:0
+}
+
+/* animates the gradient so it shifts color */
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* bubble floating animation */
+@keyframes floatUp {
+    0% {
+      transform: translateY(0) scale(1); /* Start at its initial Y position, normal size */
+      opacity: 1; /* Fully visible */
+    }
+    100% {
+      transform: translateY(-100vh) scale(1.2); /* Move up 100% of viewport height, slightly larger */
+      opacity: 0; /* Fade out as it reaches the top */
+    }
+  } 
+  /* individual bubble sizes, starting positions, and animation  */
+  .bubble-1 {
+    width: 40px;
+    height: 40px;
+    left: 10%;
+    bottom: -20px; /* Start just below the container */
+    animation: floatUp 15s linear infinite; /* 15s duration, linear speed, repeat infinite */
+    animation-delay: 0s; /* Start immediately */
+  }
+  .bubble-2 {
+    width: 60px;
+    height: 60px;
+    left: 30%;
+    bottom: -30px;
+    animation: floatUp 20s linear infinite;
+    animation-delay: 3s; /* Start after 3 seconds */
+  }
+  .bubble-3 {
+    width: 30px;
+    height: 30px;
+    left: 50%;
+    bottom: -15px;
+    animation: floatUp 12s linear infinite;
+    animation-delay: 6s;
+  }
+  .bubble-4 {
+    width: 50px;
+    height: 50px;
+    left: 70%;
+    bottom: -25px;
+    animation: floatUp 18s linear infinite;
+    animation-delay: 9s;
+  }
+  .bubble-5 {
+    width: 44px;
+    height: 44px;
+    left: 20%;
+    bottom: -22px;
+    animation: floatUp 16s linear infinite;
+    animation-delay: 1s;
+  } 
+  .bubble-6 {
+    width: 36px;
+    height: 36px;
+    left: 85%;
+    bottom: -18px;
+    animation: floatUp 14s linear infinite;
+    animation-delay: 4s;
+  }
+  .bubble-7 {
+    width: 70px;
+    height: 70px;
+    left: 40%;
+    bottom: -35px;
+    animation: floatUp 22s linear infinite;
+    animation-delay: 7s;
+  }
+   
+/* ---wave animation --- */
+.wave-container {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    margin: 0;
+    overflow: hidden;
+    z-index: 2;
+    pointer-events: none;
+}
+.wave-svg {
+    width: 100%;
+    height: 100px;
+    display: block;
+}
+.wave-path {
+    fill: #83d8ff;
+    animation: waveMove 3.5s linear infinite;
+}
+@keyframes waveMove {
+    0% {
+        d: path('M0,60 C300,120 600,0 900,80 C1200,160 1440,40 1440,60 L1440,100 L0,100 Z');
+    }
+    25% {
+        d: path('M0,70 C300,180 600,-40 900,60 C1200,140 1440,80 1440,70 L1440,100 L0,100 Z');
+    }
+    50% {
+        d: path('M0,50 C300,60 600,180 900,40 C1200,-20 1440,120 1440,50 L1440,100 L0,100 Z');
+    }
+    75% {
+        d: path('M0,65 C300,140 600,20 900,100 C1200,180 1440,60 1440,65 L1440,100 L0,100 Z');
+    }
+    100% {
+        d: path('M0,60 C300,120 600,0 900,80 C1200,160 1440,40 1440,60 L1440,100 L0,100 Z');
+    }
+}
