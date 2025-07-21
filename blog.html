@@ -3,4 +3,155 @@
   <head>
     <title>Sea The Change Blog</title>
     <link rel="stylesheet" href="style.css">
-    
+    <style>
+      /*anything specific can go here*/
+      body{
+        background: linear-gradient(135deg,#005f99,#0099cc);
+        color: white;
+        font-family: 'DynaPuff', cursive, Arial, sans-serif;
+        padding-top: 80px;
+        min-height: 100vh;
+        overflow-x: hidden;
+      }
+      nav.navbar{
+        position: fixed;
+        top: 0; left: 0; right: 0;
+        background: linear-gradient(90deg, #0066cc, #3399ff);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        z-index: 1000;
+        padding: 12px 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      nav .nav-logo{
+        font-size: 2.4rem;
+        text-shadow: 1px 1px 4px #000a;
+      }
+      nav .nav-links a:hover, nav .nav-links a.active{
+        color: #aaddff;
+        text-shadow: 0 0 6px #aaddff;
+      }
+      header{
+        text-align: center;
+        margin-botton: 60px;
+        padding: 40px 20px 0 20px;
+      }
+      header h1{
+        font-size: 5rem;
+        text-shadow:
+          0 0 6px #00bfff,
+          0 0 12px #00bbfffcc:
+        margin-bottom: 8px;
+        letter-spacing: 6px;
+      }
+      header p{
+        font-size: 1.8rem;
+        font-weight: 300;
+        opacity: 0.8:
+        max-width: 800px
+        margin: 0 auto;
+        text-shadow: 0 0 4px #004466;
+      }
+      /*blog cards*/
+      .blog-posts{
+        max-width: 900px:
+        margin: 0 auto 100px auto;
+        padding: 0 20px;
+        grid-template-columns: 1fr:
+        gap: 30px;
+      }
+      .post{
+        background: rgba(0,0,0,0.3);
+        border-radius: 20px;
+        padding: 20px 30px;
+        box-shadow: 0 0 10px #00bfff88;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .post:hover{
+        transform:translateY(-8px);
+        box-shadow: 0 0 20px #00e5ffcc;
+      }
+      .post h2{
+        font-size: 2.4rem;
+        margin-botton: 10px;
+        color: #a0eaff;
+        text-shadow: 0 0 8px #00c6ff;
+      }
+      .post p{
+        font-size: 1.1rem;
+        line-height: 1.6;
+        color: #d0f0ffcc;
+      }
+      .post time{
+        font-size: 0.9rem;
+        color: #66bfffcc;
+        display: block;
+        margin-top:12px;
+      }
+      /*putting wave animation at the bottom*/
+      .wave-container{
+        position: fixed;
+        bottom: 0; left: 0; right: 0;
+        height: 100px;
+        overflow: hidden;
+        pointer-events: none;
+        z-index: 100;
+      }
+      .wave-svg{
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+      .wave-path{
+        fill: #00bfffcc;
+        animation: waveMove 5s linear infinite;
+      }
+      @keyframes waveMove{
+        0%{
+          d: path('M0, 60 C360, 140 1080, -40 1440, 60 L1440, 100 L0, 100 Z');
+        }
+        50%{
+          d: path('M0, 50 C360, 110 1080, -20 1440, 50 L1440, 100 L0, 100 Z');
+        }
+         100% {
+        d: path('M0,60 C360,140 1080,-40 1440,60 L1440,100 L0,100 Z');
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class = "navbar">
+      <div class="nav-logo">Sea The Change</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="blog.html" class="active">Blog</a></li>
+        <li><a href="#">Sea Marine Life Conservation</a></li>
+        <li><a href="#">Wildlife & Animal Protection</a></li>
+      </ul>
+    </nav>
+    <header>
+      <h1>Sea The Change Blod</h1>
+      <p>Stories, updates, and news about animal conservation.</p>
+    </header>
+    <section class="blog-posts">
+      <article class="post">
+        <h2>Blog Post Title here</h2>
+        <p>Blog Post Description Here</p>
+        <time datetime="2025-07-21">July 20, 2025</time>
+      </article>
+      <article class="post">
+        <h2>Why marine life matters</h2>
+        <p>Learn about the crucial role marine ecosystems play in our planet's health and what we can do to protect them.</p>
+        <time datetime="2025-07-21">July 20, 2025</time>
+      </article>
+    </section>
+    <div class="wave-container">
+      <svg class="wave-svg" viewBox="0 0 1440 100" preserveAspectRation="none">
+        <path class="wave-path" d="M0,60 C360,140 1080,-40 1440, 60 L1440, 100 L0, 100 Z"/>
+      </svg>
+    </div>
+  </body>
+</html>
+        
+  </body>
