@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sea The Change Blog</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Fredoka One', cursive;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom, #a7e8ff, #ffffff);
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    .navbar {
+      background-color: rgba(255, 255, 255, 0.8);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      position: relative;
+      z-index: 10;
+    }
+
+    .nav-logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #0077b6;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+    }
+
+    .nav-link {
+      text-decoration: none;
+      color: #1a1a1a;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    .nav-link:hover, .nav-link.active {
+      color: #0077b6;
+    }
+
+    .bubble {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(173, 216, 230, 0.4);
+      animation: floatUp 10s infinite ease-in;
+      z-index: 1;
+    }
+
+    .bubble-1 { width: 60px; height: 60px; left: 5%; top: 80%; animation-delay: 0s; }
+    .bubble-2 { width: 40px; height: 40px; left: 20%; top: 85%; animation-delay: 2s; }
+    .bubble-3 { width: 30px; height: 30px; left: 40%; top: 90%; animation-delay: 4s; }
+    .bubble-4 { width: 50px; height: 50px; left: 60%; top: 88%; animation-delay: 1s; }
+    .bubble-5 { width: 70px; height: 70px; left: 80%; top: 83%; animation-delay: 3s; }
+
+    @keyframes floatUp {
+      0% { transform: translateY(0); opacity: 0.5; }
+      100% { transform: translateY(-1000px); opacity: 0; }
+    }
+
+    .blog-container {
+      max-width: 1000px;
+      margin: 100px auto;
+      padding: 2rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .blog-title {
+      font-size: 2.5rem;
+      text-align: center;
+      color: #0077b6;
+      margin-bottom: 2rem;
+    }
+
+    .blog-post {
+      background: #ffffffcc;
+      padding: 1.5rem;
+      border-radius: 20px;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 10px rgba(0, 119, 182, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .blog-post:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(0, 119, 182, 0.4);
+    }
+
+    .blog-post h2 {
+      font-size: 1.8rem;
+      color: #023e8a;
+      margin-bottom: 0.5rem;
+    }
+
+    .blog-post p {
+      line-height: 1.6;
+      font-size: 1.1rem;
+      color: #333;
+    }
+
+    .back-button {
+      display: inline-block;
+      margin-top: 2rem;
+      background-color: #48cae4;
+      color: white;
+      padding: 0.5rem 1.2rem;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .back-button:hover {
+      background-color: #0077b6;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-logo">Sea The Change</div>
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="blog.html" class="nav-link active">Blog</a></li>
+    </ul>
+  </nav>
+
+  <!-- Bubbles in the background -->
+  <div class="bubble bubble-1"></div>
+  <div class="bubble bubble-2"></div>
+  <div class="bubble bubble-3"></div>
+  <div class="bubble bubble-4"></div>
+  <div class="bubble bubble-5"></div>
+
+  <div class="blog-container">
+    <h1 class="blog-title">Our Blog</h1>
+
+    <div class="blog-post">
+      <h2>Why Clean Shores Matter</h2>
+      <p>From plastic pollution to chemical waste, our oceans are facing real threats. Learn how cleaning up shorelines impacts marine life and protects ecosystems.</p>
+    </div>
+
+    <div class="blog-post">
+      <h2>Saving Sea Turtles</h2>
+      <p>Sea turtles are endangered due to habitat loss and pollution. Here's what SEAA is doing to protect them — and how you can help.</p>
+    </div>
+
+    <a href="index.html" class="back-button">← Back to Home</a>
+  </div>
+</body>
+</html>
