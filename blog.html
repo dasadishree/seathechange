@@ -11,8 +11,9 @@
       font-family: 'Fredoka One', cursive;
       margin: 0;
       padding: 0;
-      background: linear-gradient(to bottom, #dff6ff, #ffffff);
+      background: linear-gradient(to bottom, #a7e8ff, #ffffff);
       overflow-x: hidden;
+      position: relative;
     }
 
     .navbar {
@@ -29,6 +30,7 @@
     .nav-logo {
       font-size: 1.5rem;
       font-weight: bold;
+      color: #0077b6;
     }
 
     .nav-links {
@@ -41,13 +43,19 @@
       text-decoration: none;
       color: #1a1a1a;
       font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    .nav-link:hover, .nav-link.active {
+      color: #0077b6;
     }
 
     .bubble {
       position: absolute;
       border-radius: 50%;
-      background: rgba(173, 216, 230, 0.5);
+      background: rgba(173, 216, 230, 0.4);
       animation: floatUp 10s infinite ease-in;
+      z-index: 1;
     }
 
     .bubble-1 { width: 60px; height: 60px; left: 5%; top: 80%; animation-delay: 0s; }
@@ -62,34 +70,44 @@
     }
 
     .blog-container {
-      max-width: 800px;
-      margin: 100px auto 50px;
+      max-width: 1000px;
+      margin: 100px auto;
       padding: 2rem;
-      background-color: rgba(255, 255, 255, 0.9);
-      border-radius: 20px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      z-index: 2;
       position: relative;
+      z-index: 2;
     }
 
     .blog-title {
       font-size: 2.5rem;
       text-align: center;
-      margin-bottom: 1rem;
+      color: #0077b6;
+      margin-bottom: 2rem;
     }
 
     .blog-post {
+      background: #ffffffcc;
+      padding: 1.5rem;
+      border-radius: 20px;
       margin-bottom: 2rem;
+      box-shadow: 0 4px 10px rgba(0, 119, 182, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .blog-post:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(0, 119, 182, 0.4);
     }
 
     .blog-post h2 {
       font-size: 1.8rem;
+      color: #023e8a;
       margin-bottom: 0.5rem;
     }
 
     .blog-post p {
       line-height: 1.6;
       font-size: 1.1rem;
+      color: #333;
     }
 
     .back-button {
@@ -114,7 +132,7 @@
     <div class="nav-logo">Sea The Change</div>
     <ul class="nav-links">
       <li><a href="index.html" class="nav-link">Home</a></li>
-      <li><a href="#" class="nav-link">Blog</a></li>
+      <li><a href="blog.html" class="nav-link active">Blog</a></li>
     </ul>
   </nav>
 
