@@ -6,12 +6,15 @@
   <title>Sea The Change Blog</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="sea.jpg">
   <style>
     body {
       font-family: 'Fredoka One', cursive;
       margin: 0;
       padding: 0;
       background: linear-gradient(to bottom, #a7e8ff, #ffffff);
+      background-attachment: fixed;
+      min-height: 100vh;
       overflow-x: hidden;
       position: relative;
     }
@@ -70,11 +73,9 @@
     }
 
     .blog-container {
-      max-width: 1000px;
+      max-width: 1500px;
       margin: 100px auto;
       padding: 2rem;
-      position: relative;
-      z-index: 2;
     }
 
     .blog-title {
@@ -90,49 +91,37 @@
       border-radius: 20px;
       margin-bottom: 2rem;
       box-shadow: 0 4px 10px rgba(0, 119, 182, 0.2);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      transition: transform 0.3s ease;
+      text-decoration: none;
+      display: block;
     }
 
     .blog-post:hover {
       transform: translateY(-5px);
-      box-shadow: 0 6px 15px rgba(0, 119, 182, 0.4);
     }
 
     .blog-post h2 {
       font-size: 1.8rem;
       color: #023e8a;
-      margin-bottom: 0.5rem;
+      margin-bottom: 1rem;
     }
 
     .blog-post p {
+      color: #333;
       line-height: 1.6;
       font-size: 1.1rem;
-      color: #333;
+      margin-bottom: 0;
     }
 
-    .back-button {
-      display: inline-block;
-      margin-top: 2rem;
-      background-color: #48cae4;
-      color: white;
-      padding: 0.5rem 1.2rem;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-      transition: background-color 0.3s ease;
-    }
-
-    .back-button:hover {
-      background-color: #0077b6;
-    }
   </style>
 </head>
 <body>
   <nav class="navbar">
-    <div class="nav-logo">Sea The Change</div>
+    <a href="index.html" class="nav-logo">Sea The Change</a>
     <ul class="nav-links">
       <li><a href="index.html" class="nav-link">Home</a></li>
-      <li><a href="blog.html" class="nav-link active">Blog</a></li>
+      <li><a href="blog.html" class="nav-link">Blog</a></li>
+      <li><a href="work.html" class="nav-link">Our Work</a></li>
     </ul>
   </nav>
 
@@ -146,17 +135,15 @@
   <div class="blog-container">
     <h1 class="blog-title">Our Blog</h1>
 
-    <div class="blog-post">
+    <a href="blogs/clean-shores.html" class="blog-post">
       <h2>Why Clean Shores Matter</h2>
       <p>From plastic pollution to chemical waste, our oceans are facing real threats. Learn how cleaning up shorelines impacts marine life and protects ecosystems.</p>
-    </div>
+    </a>
 
-    <div class="blog-post">
+    <a href="blogs/sea-turtles.html" class="blog-post">
       <h2>Saving Sea Turtles</h2>
       <p>Sea turtles are endangered due to habitat loss and pollution. Here's what SEAA is doing to protect them — and how you can help.</p>
-    </div>
-
-    <a href="index.html" class="back-button">← Back to Home</a>
+    </a>
   </div>
 </body>
 </html>
