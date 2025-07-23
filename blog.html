@@ -34,12 +34,15 @@
       font-size: 1.5rem;
       font-weight: bold;
       color: #0077b6;
+      text-decoration: none;
     }
 
     .nav-links {
       list-style: none;
       display: flex;
       gap: 1rem;
+      margin: 0;
+      padding: 0;
     }
 
     .nav-link {
@@ -51,6 +54,32 @@
 
     .nav-link:hover, .nav-link.active {
       color: #0077b6;
+    }
+
+    @media (max-width: 700px) {
+      .navbar {
+        flex-direction: column;
+        height: auto;
+        padding: 0.5rem 1rem;
+        align-items: flex-start;
+      }
+      
+      .nav-logo {
+        font-size: 1.3rem;
+        margin: 10px 0 0 0;
+      }
+      
+      .nav-links {
+        flex-direction: column;
+        gap: 0.5rem;
+        width: 100%;
+        margin: 10px 0;
+      }
+      
+      .nav-link {
+        display: block;
+        padding: 8px 0;
+      }
     }
 
     .bubble {
