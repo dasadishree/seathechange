@@ -1,5 +1,10 @@
 # seathechange
+View finished website at: https://seathechange.netlify.app/
+- A youth nonprofit focused on sea/marine life conservation as well as wildlife & shelter protection.
 
+
+
+## Design Instructions
 Name: Sea The Change: Sea Environment & Animals Alliance
 Hi! SEAA, a youth non-profit.
 Sea/marine life conservation; stopping shore pollution.
