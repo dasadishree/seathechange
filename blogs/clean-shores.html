@@ -54,6 +54,76 @@
         .back-button:hover {
             background-color: #0077b6;
         }
+
+        .navbar {
+            background-color: rgba(255, 255, 255, 0.8);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 10;
+        }
+
+        .nav-logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #0077b6;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: #1a1a1a;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: #0077b6;
+        }
+
+        @media (max-width: 700px) {
+            .navbar {
+                flex-direction: column;
+                height: auto;
+                padding: 0.5rem 1rem;
+                align-items: flex-start;
+            }
+            
+            .nav-logo {
+                font-size: 1.3rem;
+                margin: 10px 0 0 0;
+            }
+            
+            .nav-links {
+                flex-direction: column;
+                gap: 0.5rem;
+                width: 100%;
+                margin: 10px 0;
+            }
+            
+            .nav-link {
+                display: block;
+                padding: 8px 0;
+            }
+
+            .blog-content {
+                margin: 80px 20px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -67,12 +137,12 @@
     </nav>
 
     <div class="blog-content">
-        <h1>Why Clean Shores Matter</h1>
-        <p>Our oceans are facing unprecedented challenges due to human activities. Every year, millions of tons of plastic waste find their way into our oceans, threatening marine life and disrupting delicate ecosystems. The impact is far-reaching, affecting everything from tiny plankton to massive whales.</p>
+        <!-- blog title between the h1's--><h1>Why Clean Shores Matter</h1> 
+        <!-- blog paragraph (write between the p's) (each paragraph should be it's own p line)--> <p>Our oceans are facing unprecedented challenges due to human activities. Every year, millions of tons of plastic waste find their way into our oceans, threatening marine life and disrupting delicate ecosystems. The impact is far-reaching, affecting everything from tiny plankton to massive whales.</p>
         
-        <p>Regular beach cleanups have shown remarkable results in protecting marine life. In just one cleanup session, volunteers can collect hundreds of pounds of debris that would otherwise end up in our oceans. Beyond the immediate impact, clean shores contribute to healthier ocean ecosystems, improved water quality, and better habitats for both marine life and shore birds.</p>
+        <!-- so if ur blog was 2 paragraphs, write the second paragraph here--><p>Regular beach cleanups have shown remarkable results in protecting marine life. In just one cleanup session, volunteers can collect hundreds of pounds of debris that would otherwise end up in our oceans. Beyond the immediate impact, clean shores contribute to healthier ocean ecosystems, improved water quality, and better habitats for both marine life and shore birds.</p>
         
-        <p>Our efforts today will ensure a better future for generations to come. Through consistent beach cleanup initiatives and community engagement, we can make a significant difference in preserving our ocean ecosystems.</p>
+        <!-- 3rd paragraph--><p>Our efforts today will ensure a better future for generations to come. Through consistent beach cleanup initiatives and community engagement, we can make a significant difference in preserving our ocean ecosystems.</p>
 
         <a href="../blog.html" class="back-button">← Back to Blog</a>
     </div>

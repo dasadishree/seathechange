@@ -34,12 +34,15 @@
       font-size: 1.5rem;
       font-weight: bold;
       color: #0077b6;
+      text-decoration: none;
     }
 
     .nav-links {
       list-style: none;
       display: flex;
       gap: 1rem;
+      margin: 0;
+      padding: 0;
     }
 
     .nav-link {
@@ -51,6 +54,32 @@
 
     .nav-link:hover, .nav-link.active {
       color: #0077b6;
+    }
+
+    @media (max-width: 700px) {
+      .navbar {
+        flex-direction: column;
+        height: auto;
+        padding: 0.5rem 1rem;
+        align-items: flex-start;
+      }
+      
+      .nav-logo {
+        font-size: 1.3rem;
+        margin: 10px 0 0 0;
+      }
+      
+      .nav-links {
+        flex-direction: column;
+        gap: 0.5rem;
+        width: 100%;
+        margin: 10px 0;
+      }
+      
+      .nav-link {
+        display: block;
+        padding: 8px 0;
+      }
     }
 
     .bubble {
@@ -134,11 +163,13 @@
 
   <div class="blog-container">
     <h1 class="blog-title">Our Blog</h1>
-<a href="blogs/banturtlesforever.html" class="blog-post">
-      <h2>Ban Turtles</h2>
-      <p>i like turtles because i am vsco girl</p>
+
+    <!--write any link inside so write href="blogs/any-link.html, later u will create this link" --><a href="blogs/clean-shores.html" class="blog-post">
+      <!-- blog title (write between the h2's)--> <h2>Why Clean Shores Matter</h2> 
+      <!-- blog mini description (write between the p's)--> <p>From plastic pollution to chemical waste, our oceans are facing real threats. Learn how cleaning up shorelines impacts marine life and protects ecosystems.</p>
     </a>
 
+<<<<<<< HEAD
     <a href="blogs/clean-shores.html" class="blog-post">
       <h2>Why Clean Shores Matter</h2>
       <p>From plastic pollution to chemical waste, our oceans are facing real threats. Learn how cleaning up shorelines impacts marine life and protects ecosystems.</p>
@@ -153,6 +184,11 @@
     <a href="blogs/sea-turtles.html" class="blog-post">
       <h2>Saving Sea Turtles</h2>
       <p>Sea turtles are endangered due to habitat loss and pollution. Here's what SEAA is doing to protect them — and how you can help.</p>
+=======
+     <!--write any link inside so write href="blogs/any-link.html, later u will create this link" --><a href="blogs/sea-turtles.html" class="blog-post">
+      <!-- blog title (write between the h2's)--> <h2>Saving Sea Turtles</h2>
+      <!-- blog mini description (write between the p's)--> <p>Sea turtles are endangered due to habitat loss and pollution. Here's what SEAA is doing to protect them — and how you can help.</p>
+>>>>>>> 7d2d7e521b4b531c30d9eb28368dc4a4fc864c5f
     </a>
   </div>
 </body>

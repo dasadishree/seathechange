@@ -1,5 +1,10 @@
 # seathechange
+View finished website at: https://seathechange.netlify.app/
+- A youth nonprofit focused on sea/marine life conservation as well as wildlife & shelter protection.
 
+
+
+## Design Instructions
 Name: Sea The Change: Sea Environment & Animals Alliance
 Hi! SEAA, a youth non-profit.
 Sea/marine life conservation; stopping shore pollution.
@@ -22,3 +27,4 @@ pfp/logo is on their insta but also may be changed later on
 screens they want: 
 home screen, board/team screen, sections on their pages about sea/marine life conservation, wildlife and animal protection (blog areas), about us with links, blog screen where they can easily add blog articles and comment on blogs/articles
 
+[![Athena Award Badge](https://img.shields.io/endpoint?url=https%3A%2F%2Faward.athena.hackclub.com%2Fapi%2Fbadge)](https://award.athena.hackclub.com?utm_source=readme)
